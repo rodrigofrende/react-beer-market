@@ -14,7 +14,15 @@ const styles = {
   },
   footer: {
     justifyContent: 'space-around',
-    display: 'flex'
+    display: 'flex',
+    border: '3px dotted black'
+  },
+  price: {
+    backgroundColor: '#000',
+    color: 'white',
+    borderRadius: '10px',
+    padding: '2px 6px',
+    marginRight: '10px'
   }
 }
 
@@ -27,13 +35,13 @@ class Producto extends Component {
         <img className='img-producto' alt={producto.name} src={producto.image_url} />
         <p className='descripcion-producto' title={producto.description}>{producto.description}</p>
         <div id="footer" style={styles.footer}>
-          <span title={'IBU is an abbreviation for the International Bitterness Units scale'}>IBU: {producto.ibu}</span>
-          <span title={'ABV is an abbreviation for alcohol by volume'}>ABV: {producto.abv}</span>
-          <span title={`Price: $ ${producto.attenuation_level}`}>$ {producto.attenuation_level}</span>
+          <span className='my-auto'  title={'IBU is an abbreviation for the International Bitterness Units scale'}>IBU: {producto.ibu}</span>
+          <span className='my-auto' title={'ABV is an abbreviation for alcohol by volume'}>ABV: {producto.abv}</span> 
         </div>
-        <p> 
-          {/* alinear verticalmente, modal con extra datos & change <a>  */}
-          <a href="/#">More details</a>
+        <p id="priceFooter" className='d-flex'>
+          <span  style={styles.footer, styles.price}>
+            <span className='my-auto' title={`Price: $ ${producto.attenuation_level}`}>$ {producto.attenuation_level}</span>
+          </span> 
           <Button onClick={() => agregarAlCarro(producto)}>
             Add to cart
           </Button>

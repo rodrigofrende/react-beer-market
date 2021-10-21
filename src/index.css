@@ -18,15 +18,25 @@ code {
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /* styles */
-#footer span {
+.my-auto {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.d-flex {
+  display: flex;
+}
+
+#footer span, #priceFooter span {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 1.5rem;
-  margin: 10px 0;
+}
+#priceFooter {
+  justify-content: flex-end;
 }
 
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(334px, 1fr));
   grid-gap: 14px;
 }
 
@@ -62,4 +72,6 @@ code {
   -webkit-box-orient: vertical;
   text-align: justify;
   margin-top: 30px;
+  /* sospechosa height para emparejar descripciones */
+  height: 63px; 
 }
