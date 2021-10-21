@@ -39,7 +39,7 @@ class Producto extends Component {
           <span className='my-auto' title={'ABV is an abbreviation for alcohol by volume'}>ABV: {producto.abv}</span> 
         </div>
         <p id="priceFooter" className='d-flex'>
-          <span  style={[styles.footer, styles.price]}>
+          <span  style={{...styles.footer, ...styles.price}}>
             <span className='my-auto' title={`Price: $ ${producto.attenuation_level}`}>$ {producto.attenuation_level}</span>
           </span> 
           <Button onClick={() => agregarAlCarro(producto)}>
