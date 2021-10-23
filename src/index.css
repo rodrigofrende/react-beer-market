@@ -75,3 +75,11 @@ code {
   /* sospechosa height para emparejar descripciones */
   height: 63px; 
 }
+
+.bubble-alert {
+  background-color: #e03310;
+  border-radius: 15px;
+  padding: 2px 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}

@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 import logo from '../assets/logo.png'
+import Cart from './Cart'
 
 const styles = {
   navbar: {
@@ -22,7 +23,7 @@ class NavBar extends Component {
     return (
       <nav style={styles.navbar}>
         <img src={logo} height='40px' alt="Logo" />
-        <p>Carro</p>
+        <Cart />
       </nav>
     )
   }
