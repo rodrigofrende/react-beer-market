@@ -20,10 +20,15 @@ const styles = {
 
 class NavBar extends Component {
   render() {
+    const { carro, showCarro, mostrarCarro } = this.props
     return (
       <nav style={styles.navbar}>
         <img src={logo} height='40px' alt="Logo" />
-        <Cart />
+        <Cart 
+          carro={carro}
+          showCarro={showCarro}
+          mostrarCarro={mostrarCarro}
+        />
       </nav>
     )
   }

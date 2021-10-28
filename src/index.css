@@ -40,6 +40,10 @@ code {
   grid-gap: 14px;
 }
 
+.carrito {
+  cursor: pointer;
+}
+
 .img-producto {
   max-width: 300px;
   max-height: 210px;
