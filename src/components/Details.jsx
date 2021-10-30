@@ -35,8 +35,8 @@ class Details extends Component {
           {carro.map(x => 
             <li style={styles.li} key={x.id}>
               <img className='details-img' width='18' height='60' src={x.image_url} alt={x.name} />
-              {x.name} 
-              <span>{x.cantidad}</span>
+              <p className='detail-name'>{x.name} </p>
+              <p>x {x.cantidad}</p>
             </li>
           )}
         </ul>

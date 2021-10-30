@@ -2,11 +2,12 @@ import { Component } from "react";
 
 const styles = {
   layout: {
-    backgroundColor: 'white',
+    backgroundColor: '#ebebeb',
     color: '#0A283E',
     alignItems: 'center',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    fontFamily: 'Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif'
   },
   container: {
     maxWidth: '1200px'

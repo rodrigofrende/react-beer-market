@@ -3,7 +3,6 @@ import axios from 'axios'
 
 import Productos from './components/Productos'
 import Layout from './components/Layout'
-import Title from './components/Title'
 import NavBar from './components/NavBar'
 
 class App extends Component {
@@ -53,14 +52,13 @@ class App extends Component {
   render() {
     const { showCarro } = this.state
     return (
-      <div>
+      <div className='backdrop'>
         <NavBar 
           mostrarCarro={this.mostrarCarro}
           showCarro={showCarro}
           carro={this.state.carro}
         />
-        <Layout>
-          <Title />
+        <Layout >
           <Productos
             agregarAlCarro={this.agregarAlCarro}
             productos={this.state.productos}
