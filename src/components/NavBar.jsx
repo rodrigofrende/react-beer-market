@@ -11,7 +11,7 @@ const styles = {
     height: '70px',
     backgroundColor: 'rgb(10, 40, 62)',
     justifyContent: 'space-between',
-    position: 'relative',
+    position: 'fixed',
     padding: '0 50px',
     boxShadow: '0 2px 3px rgb(0, 0, 0, 0.3)',
     color: 'white'
@@ -21,21 +21,25 @@ const styles = {
     margin: '0.3rem 0',
     fontSize: '1.2rem'
   },
+  img: {
+    cursor: 'pointer'
+  }
 }
 
 class NavBar extends Component {
   render() {
-    const { carro, showCarro, mostrarCarro } = this.props
+    const { carro, showCarro, mostrarCarro, animation } = this.props
     return (
-      <nav style={styles.navbar}>
+      <nav style={styles.navbar} className='nav-bar'>
         <div className='d-flex'>
-          <img src={logo} height='40px' alt="Logo" />
+          <img style={styles.img} onClick={() => window.scrollTo(0, 0)} src={logo} height='40px' alt="Logo" />
           <h1 style={styles.title}>React Beer Market</h1>
         </div>
         <Cart 
           carro={carro}
           showCarro={showCarro}
           mostrarCarro={mostrarCarro}
+          animation={animation}
         />
       </nav>
     )

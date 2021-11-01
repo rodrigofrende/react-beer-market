@@ -10,7 +10,8 @@ class App extends Component {
     productos: [],
     carro: [
     ],
-    showCarro: false 
+    showCarro: false,
+    animation: false
   }
   componentDidMount() {
     this.getProductos();
@@ -20,6 +21,9 @@ class App extends Component {
     if(!this.state.carro.length) {
       return
     }
+    debugger
+    this.setState({ animation: !this.state.animation })
+    console.log('animatio: ', this.state.animation)
     this.setState({ showCarro: !this.state.showCarro })
   }
 
@@ -57,8 +61,9 @@ class App extends Component {
           mostrarCarro={this.mostrarCarro}
           showCarro={showCarro}
           carro={this.state.carro}
+          animation={this.state.animation}
         />
-        <Layout >
+        <Layout className='layout'>
           <Productos
             agregarAlCarro={this.agregarAlCarro}
             productos={this.state.productos}

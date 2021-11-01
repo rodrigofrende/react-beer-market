@@ -25,7 +25,7 @@ const styles = {
     borderBottom: 'solid  1px #aaa'
   }
 }
-
+// TODO: agregar un maximo al details , y una seccion abajo que diga 5+ por ej y un ver mas
 class Details extends Component {
   render() {
     const { carro } = this.props

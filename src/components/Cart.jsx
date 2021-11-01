@@ -12,7 +12,7 @@ const styles = {
 
 class Cart extends Component {
   render() {
-    const { carro, showCarro, mostrarCarro } = this.props
+    const { carro, showCarro, mostrarCarro, animation } = this.props
     const cantidad = carro.reduce((acc, el) => acc + el.cantidad, 0)
     return (
       <div>
@@ -22,7 +22,7 @@ class Cart extends Component {
             null
           }
         </span>
-        <img className='carrito' onClick={() => mostrarCarro()} src="https://icongr.am/fontawesome/cart-plus.svg?size=35&color=ffffff" alt="Cart" />
+        <img className={animation ? 'carrito cart-logo' : 'carrito'}  onClick={() => mostrarCarro()} src="https://icongr.am/fontawesome/cart-plus.svg?size=35&color=ffffff" alt="Cart" />
         {showCarro ? 
           <Details carro={carro} /> :
           null

@@ -7,6 +7,7 @@ const styles = {
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
+    paddingTop: '70px',
     fontFamily: 'Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif'
   },
   container: {
